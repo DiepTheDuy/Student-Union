@@ -18,6 +18,9 @@
 	<!-- Lineawesome CSS -->
 	<link rel="stylesheet" href="assets/css/line-awesome.min.css">
 
+	<!-- Table editor -->
+	<link rel="stylesheet" href="assets/css/table-editor.css">
+
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
 
@@ -456,7 +459,48 @@
 			<!-- Page Content -->
 			<div class="content container-fluid">
 
+				<!-- Jugedment table -->
+				<div class="card m-b-30">
+					<div class="card-header">
+						<h4 class="card-title mb-0">Bảng chỉnh sửa nội dung</h4>
+					</div>
+					<div class="card-body" style="padding-left: 160px;">
+						<div class="row">
+							<div class="col-md-12">
 
+								<form action="">
+									<div class="table-responsive" style="white-space:unset">
+										<table class="table table-bordered mb-0 juged-table table-editor">
+											<thead>
+												<tr class="text-center">
+													<th style="width: 50%;">Nội dung</th>
+													<th style="width: 18%;">Điểm tối đa</th>
+													<th>Minh chứng</th>
+													<th style="width: 170px;" class="border-0"></th>
+												</tr>
+											</thead>
+											<tbody></tbody>
+										</table>
+
+									</div>
+									<div class="d-flex justify-content-start my-3">
+										<div class="btn btn-outline-primary py-2 mt-3 table-edit_submit-btn"
+											style="width:83%">Tạo</div>
+									</div>
+
+								</form>
+
+								<!-- when done jugedment -->
+								<!-- <div class="d-flex justify-content-center">
+                                    <p class="text-xl d-inline-flex align-items-center">Bạn đã chấm điểm rèn luyện<i
+                                            class="las la-thumbs-up font-35 text-info"></i></p>
+                                </div> -->
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Jugedment table -->
 
 			</div>
 			<!-- /Page Content -->
@@ -492,6 +536,9 @@
 
 	<!-- Slimscroll JS -->
 	<script src="assets/js/jquery.slimscroll.min.js"></script>
+
+	<!-- Table editor -->
+	<!-- <script src="assets/js/table-editor.js"></script> -->
 
 	<!-- Table editor -->
 	<script src="assets/js/table-editor.js"></script>

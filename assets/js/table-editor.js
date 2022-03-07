@@ -72,8 +72,6 @@ const tableEditor = {
           hasImg: false,
         },
       ],
-      maxScore: 5,
-      hasImg: false,
     },
   ],
   // Hàm render
@@ -429,7 +427,6 @@ const tableEditor = {
             }
             indexRow--;
           }
-          //console.log(tableEditor.content);
         });
       }
 
@@ -680,6 +677,7 @@ const tableEditor = {
       }
 
       //------------------ show row options btn -------------------
+
       //parent div
       if (e.target.classList.contains("table-edit_show-ops-btn")) {
         showRowOptionsBtn = e.target;
@@ -713,6 +711,28 @@ const tableEditor = {
       if (e.target.classList.contains("table-edit_show-ops-btn-child")) {
         const showRowOptionsBtnChild = e.target;
         showRowOptionsBtnChild.closest(".table-edit_show-ops-btn").click();
+      }
+
+      // check total max score in tange 100 (click submit btn)
+      if (e.target.classList.contains("table-edit_submit-btn")) {
+        const submitBtn = e.target;
+        let initialValue = 0;
+        const tableEditorContentLength = tableEditor.content.length;
+        for (let i = 0; i < tableEditorContentLength; i++) {
+          const itemContentLength = tableEditor.content[i].itemContents.length;
+          for (let j = 0; j < itemContentLength; j++) {
+            initialValue += tableEditor.content[i].itemContents[j].maxScore;
+          }
+        }
+        if (initialValue < 100) {
+          alert(`Điểm của bạn nhập chưa đủ 100 - ${initialValue}`);
+        }
+        if (initialValue > 100) {
+          alert(`Điểm của bạn nhập quá 100 - ${initialValue}`);
+        }
+        if (initialValue == 100) {
+          alert(`Tạo thành công - ${initialValue}`);
+        }
       }
     });
   },
